@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_components/router/app_routes.dart';
 import 'screens/screens.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: "Material App",
       // home: const CardScreen(),
       // ! Navegacion 1.0
-      initialRoute: "home",
+      initialRoute: AppRoutes.initialRoute,
       routes: {
         "home": (context) => const HomeScreen(),
         "listview1": (context) => const ListView1Screen(),
