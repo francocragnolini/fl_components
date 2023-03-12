@@ -18,23 +18,27 @@ class MyApp extends StatelessWidget {
       // home: const CardScreen(),
       // ! Navegacion 1.0
       initialRoute: AppRoutes.initialRoute,
-      routes: {
-        "home": (context) => const HomeScreen(),
-        "listview1": (context) => const ListView1Screen(),
-        "listview2": (context) => const ListView2Screen(),
-        "alert": (context) => const AlertScreen(),
-        "card": (context) => const CardScreen(),
-      },
+      // routes: {
+      //   "home": (context) => const HomeScreen(),
+      //   "listview1": (context) => const ListView1Screen(),
+      //   "listview2": (context) => const ListView2Screen(),
+      //   "alert": (context) => const AlertScreen(),
+      //   "card": (context) => const CardScreen(),
+      // },
+
+      //! managing the routes using a Class AppRoutes
+      //! Single responsability principle
+      routes: AppRoutes.getAppRoutes(),
 
       // ! en caso de que alguna de las rutas no exista
       // ! debe regresar o retornar una ruta
-      onGenerateRoute: (settings) {
-        print(settings);
-        //! return a route
-        return MaterialPageRoute(
-          builder: (context) => const AlertScreen(),
-        );
-      },
+      // onGenerateRoute: (settings) {
+      //   print(settings);
+      //   return MaterialPageRoute(
+      //     builder: (context) => const AlertScreen(),
+      //   );
+      // },
+      onGenerateRoute: (settings) => AppRoutes.onGenerateRoute(settings),
     );
   }
 }
