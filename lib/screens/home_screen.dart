@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_components/router/app_routes.dart';
-import 'package:flutter_components/screens/screens.dart';
+import 'package:flutter_components/theme/app_theme.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -11,13 +11,12 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Components Flutter"),
-        elevation: 0,
       ),
       body: ListView.separated(
           itemBuilder: (context, index) => ListTile(
                 leading: Icon(
                   menuOptions[index].icon,
-                  color: Colors.indigo,
+                  color: AppTheme.primary,
                 ),
                 title: Text(menuOptions[index].name),
                 onTap: () {

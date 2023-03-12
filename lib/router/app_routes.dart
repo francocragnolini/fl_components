@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_components/models/models.dart';
 
@@ -57,7 +59,7 @@ class AppRoutes {
   // };
 
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
-    print(settings);
+    log(settings.toString());
     //! return a route
     return MaterialPageRoute(
       builder: (context) => const AlertScreen(),

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 class ListView2Screen extends StatelessWidget {
@@ -20,7 +22,7 @@ class ListView2Screen extends StatelessWidget {
                 trailing: const Icon(Icons.arrow_right_alt_outlined),
                 onTap: () {
                   final game = options[index];
-                  print(game);
+                  log(game);
                 },
               ),
           separatorBuilder: (_, __) => const Divider(),

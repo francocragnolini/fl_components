@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_components/router/app_routes.dart';
-import 'screens/screens.dart';
+import 'package:flutter_components/theme/app_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,6 +39,7 @@ class MyApp extends StatelessWidget {
       //   );
       // },
       onGenerateRoute: (settings) => AppRoutes.onGenerateRoute(settings),
+      theme: AppTheme.darkTheme,
     );
   }
 }
