@@ -10,15 +10,30 @@ class AppTheme {
       // appbar theme
       appBarTheme: const AppBarTheme(
         color: primary,
-      ));
+      ),
+
+      // text button style
+      textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(foregroundColor: primary)));
 
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
-      // color primario
-      primaryColor: Colors.indigo,
-      // scaffold color
-      scaffoldBackgroundColor: Colors.black,
-      // appbar theme
-      appBarTheme: const AppBarTheme(
-        color: primary,
-      ));
+    // color primario
+    primaryColor: Colors.indigo,
+    // scaffold color
+    scaffoldBackgroundColor: Colors.black,
+    // appbars theme
+    appBarTheme: const AppBarTheme(
+      color: primary,
+    ),
+
+    //FlotaingActionsButtons
+    floatingActionButtonTheme: const FloatingActionButtonThemeData(
+        backgroundColor: primary, elevation: 0),
+    // ElevatedButtons
+    elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+            backgroundColor: primary,
+            shape: const StadiumBorder(),
+            elevation: 0)),
+  );
 }
