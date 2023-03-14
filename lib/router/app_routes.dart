@@ -49,12 +49,17 @@ class AppRoutes {
         route: 'inputs_screen',
         name: "Inputs Screens",
         screen: InputsScreen(),
-        icon: Icons.play_circle_filled_outlined),
+        icon: Icons.input_rounded),
     MenuOption(
         route: 'slider_checks',
         name: "Sliders and Checks",
         screen: const SliderScreen(),
-        icon: Icons.play_circle_filled_outlined),
+        icon: Icons.slideshow_outlined),
+    MenuOption(
+        route: 'list_view_builder',
+        name: "ListView Builder",
+        screen: const ListViewBuilderScreen(),
+        icon: Icons.build_circle_outlined),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
